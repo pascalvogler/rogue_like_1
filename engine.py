@@ -17,8 +17,9 @@ class Engine:
 
     def handle_events(self, events: Iterable[Any]) -> None:
         for event in events:
+            #print(f"Event: {event} detected.")
             action = self.event_handler.dispatch(event)
-
+            #print(f"Action evaluated as: {action}")
             if action is None:
                 continue
 
